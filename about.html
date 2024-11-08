@@ -29,7 +29,7 @@
             <div>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">firstName</span> = <span style="color: rgb(186, 136, 86);">"Jorge"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">lastName</span> = <span style="color: rgb(186, 136, 86);">"Wellesley-Bourke Hernandez"</span>;<br>
-                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">age</span> = <span style="color: rgb(181, 206, 168);">18</span>;<br>
+                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">age</span> = <span style="color: rgb(181, 206, 168);">getAge()</span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">state</span> = <span style="color: rgb(186, 136, 86);">"NJ"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">city</span> = <span style="color: rgb(186, 136, 86);">"Guttenberg"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">phoneNumber</span> = <span style="color: rgb(181,206,168);">9142232597</span>;<br>
@@ -55,6 +55,18 @@
     </div>
 
     <script>
+        function getAge() {
+            const date = new Date();
+            const birth = '2006-07-30';
+            let today = '${date.getFullYear()}-${date.getMonth()+1}-${date.getDay()}';
+            let dif = today - birth;
+            
+            if (today.getMonth() < birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate())) {
+                diff--;
+            }
+            return diff
+        }
+        
         function openInNewTab(url) {
             window.open(url, '_blank');
         }
