@@ -29,7 +29,7 @@
             <div>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">firstName</span> = <span style="color: rgb(186, 136, 86);">"Jorge"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">lastName</span> = <span style="color: rgb(186, 136, 86);">"Wellesley-Bourke Hernandez"</span>;<br>
-                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">age</span> = <span style="color: rgb(181, 206, 168);">getAge()</span>;<br>
+                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">age</span> = <span style="color: rgb(181, 206, 168);" id="age" onload="getAge()"></span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">state</span> = <span style="color: rgb(186, 136, 86);">"NJ"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">city</span> = <span style="color: rgb(186, 136, 86);">"Guttenberg"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">phoneNumber</span> = <span style="color: rgb(181,206,168);">9142232597</span>;<br>
@@ -64,7 +64,7 @@
             if (today.getMonth() < birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate())) {
                 diff--;
             }
-            return diff
+            document.getElementById("age").innerHTML = diff
         }
         
         function openInNewTab(url) {
