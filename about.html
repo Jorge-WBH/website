@@ -32,6 +32,7 @@
                 <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">currentAge</span> = <span style="color: rgb(181, 206, 168);" id="year-difference"></span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">state</span> = <span style="color: rgb(186, 136, 86);">"NJ"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">city</span> = <span style="color: rgb(186, 136, 86);">"Guttenberg"</span>;<br>
+                <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">email</span> = <span style="color: rgb(186, 136, 86);">"jorgewellesleybh@gmail.com"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">phoneNum</span> = <span style="color: rgb(181,206,168);">9142232597</span>;<br>
                 <br>
             </div>
@@ -39,8 +40,9 @@
 
         <div class="btn-group" style="height: 40px;">
             <button onclick="openInNewTab('https://docs.google.com/document/d/1tOf76OE-QoCFgwFesUexVKB75BXJ0sSva01mMkCTfm8/edit?usp=sharing')">open resume</button>
-            <button onclick="openInNewTab('https://github.com/Jorge-WBH')">github</button>
+            <button onclick="openInNewTab('https://github.com/Jorge-WBH')">open github</button>
             <button onclick="copyEmail()" id="copyEmailButton">copy email</button>
+            <button onclick="copyPhone()" id="copyEmailButton">copy phoneNum</button>
         </div>
         
     </div>
@@ -48,8 +50,9 @@
     <div class="tcenter">
         <small>
             <footer>
-                This website is in very early production (ver 2)<br>
-                © 2024 Jorge Wellesley-B H
+                This website is in very early production<br>
+                © 2024 Jorge Wellesley-B H<br>
+                Last updated on 11/10/24
             </footer>
         </small>
     </div>
@@ -72,6 +75,10 @@
 
         function copyEmail(){
             navigator.clipboard.writeText("jorgewellesleybh@gmail.com");
+        }
+
+        function copyPhone(){
+            navigator.clipboard.writeText("9142232597");
         }
 
         document.getElementById("copyEmailButton").addEventListener("click", function() {
