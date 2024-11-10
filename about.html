@@ -25,14 +25,14 @@
     <div class="centerblock">
         <h1>About</h1>
         <div style="font-size:1.25em; word-wrap: break-word;">
-            <!--the funny code thingy-->
+            <!--the funny code with colors thingy-->
             <div>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">firstName</span> = <span style="color: rgb(186, 136, 86);">"Jorge"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">lastName</span> = <span style="color: rgb(186, 136, 86);">"Wellesley-Bourke Hernandez"</span>;<br>
-                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">age</span> = <span style="color: rgb(181, 206, 168);" id="age" onload="getAge()"></span>;<br>
+                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">currentAge</span> = <span style="color: rgb(181, 206, 168);" id="year-difference"></span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">state</span> = <span style="color: rgb(186, 136, 86);">"NJ"</span>;<br>
                 <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">city</span> = <span style="color: rgb(186, 136, 86);">"Guttenberg"</span>;<br>
-                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">phoneNumber</span> = <span style="color: rgb(181,206,168);">9142232597</span>;<br>
+                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">phoneNum</span> = <span style="color: rgb(181,206,168);">9142232597</span>;<br>
                 <br>
             </div>
         </div>
@@ -55,18 +55,17 @@
     </div>
 
     <script>
-        function getAge() {
-            const date = new Date();
-            const birth = '2006-07-30';
-            let today = '${date.getFullYear()}-${date.getMonth()+1}-${date.getDay()}';
-            let dif = today - birth;
-            
-            if (today.getMonth() < birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate())) {
-                diff--;
-            }
-            document.getElementById("age").innerHTML = diff
+        function yearDiff() {
+            const today = new Date();
+            const birth = new Date("2006-07-30");
+            let years = today.getFullYear()-birth.getFullYear();
+            const m = today.getMonth() - birth.getMonth(); 
+            if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) { 
+                years--; 
+            } 
+            return years;
         }
-        
+
         function openInNewTab(url) {
             window.open(url, '_blank');
         }
@@ -84,6 +83,7 @@
                 button.textContent = originalText;
             }, 1000); // Change back after 2 seconds
         });
+        document.getElementById('year-difference').innerText = yearDiff();
     </script>
 </body>
 </html>
