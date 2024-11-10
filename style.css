@@ -40,6 +40,7 @@ body{
 .btn-group{
     display: flex;
     justify-content: space-around;
+    min-height: 40px;
 }
 
 .btn-group button{
