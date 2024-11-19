@@ -21,7 +21,7 @@ body{
 }
 
 .red{
-    color:rgb(255, 0, 72);
+    color:rgb(194, 2, 2);
 }
 
 .tcenter{
@@ -55,7 +55,7 @@ body{
 }
 
 .btn-group button:hover{
-    background-color: rgb(255, 0, 72);
+    background-color: rgb(149, 10, 10);
 }
 
 a{
@@ -83,7 +83,7 @@ li a{
 }
 
 li a:hover{
-    background-color: rgb(202, 21, 72);
+    background-color: rgb(149, 10, 10);
 }
 
 .column{
