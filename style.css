@@ -55,7 +55,7 @@ body{
 }
 
 .btn-group button:hover{
-    background-color: rgb(149, 10, 10);
+    background-color: rgb(194, 2, 2);
 }
 
 a{
@@ -83,7 +83,7 @@ li a{
 }
 
 li a:hover{
-    background-color: rgb(149, 10, 10);
+    background-color: rgb(194, 2, 2);
 }
 
 .column{
