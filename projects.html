@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge's Portfolio Projects</title>
+    <title>Jorge's Portfolio Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="templates/header.js" type="text/javascript" defer></script>
+    <script src="templates/footer.js" type="text/javascript" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./content/favicon.ico">
 </head>
 <body>
     <!--nav bar-->
-    <ul style="margin: 0;">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li style="float: right;"><a href="https://genrandom.com/cats/" target="_blank">?</a></li>
-    </ul>
+    <header-template></header-template>
 
     <!--main content-->
     <div class="centerblock">
@@ -30,7 +27,7 @@
         <!--this website-->
         <div>
             <h2>
-                <a class = "red" href="https://jorge-wbh.github.io/website/" target="_blank">This website!</a>
+                <a class = "red" href="https://jorge-wbh.github.io/website/" target="_blank">This website!</a> 2022
             </h2>
             <p>
                 I made this website myself in pure html, css, and some javascript. I'm currently hosting this through github pages, although that might change in the future. 
@@ -61,14 +58,6 @@
         </div>
     </div>
 
-    <div class="tcenter">
-        <small>
-            <footer>
-                This website is in very early production<br>
-                © 2024 Jorge Wellesley-B H<br>
-                Last updated on 4/20/25
-            </footer>
-        </small>
-    </div>
+    <footer-template></footer-template>
 </body>
 </html>

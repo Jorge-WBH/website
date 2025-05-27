@@ -24,6 +24,18 @@ body{
     color:rgb(194, 2, 2);
 }
 
+.lgreen {
+    color: rgb(78, 187, 125);
+}
+
+.lblue {
+    color: rgb(93,177,205);
+}
+
+.lbrown {
+    color: rgb(186, 136, 86)
+}
+
 .tcenter{
     text-align: center;
     line-height: 1.5;
@@ -82,7 +94,7 @@ li a{
     text-decoration: none;
 }
 
-li a:hover{
+li a:hover, li a:focus{
     background-color: rgb(194, 2, 2);
 }
 

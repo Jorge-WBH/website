@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge's Portfolio About</title>
+    <title>Jorge's Portfolio Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="templates/header.js" type="text/javascript" defer></script>
+    <script src="templates/footer.js" type="text/javascript" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./content/favicon.ico">
 </head>
 <body>
     <!--nav bar-->
-    <ul style="margin: 0;">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li style="float: right;"><a href="https://genrandom.com/cats/" target="_blank">?</a></li>
-    </ul>
+    <header-template></header-template>
 
     <!--main content-->
     <div class="centerblock">
@@ -26,18 +23,18 @@
         <div style="font-size:1.25em; word-wrap: break-word;">
             <!--the funny code with colors thingy-->
             <div>
-                <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">firstName</span> = <span style="color: rgb(186, 136, 86);">"Jorge"</span>;<br>
-                <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">lastName</span> = <span style="color: rgb(186, 136, 86);">"Wellesley-Bourke Hernandez"</span>;<br>
-                <span style="color: rgb(78, 187, 125);">int</span> <span style="color: rgb(93,177,205);">currentAge</span> = <span style="color: rgb(181, 206, 168);" id="year-difference"></span>;<br>
-                <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">state</span> = <span style="color: rgb(186, 136, 86);">"NJ"</span>;<br>
-                <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">city</span> = <span style="color: rgb(186, 136, 86);">"Guttenberg"</span>;<br>
-                <span style="color: rgb(78, 187, 125);">String</span> <span style="color: rgb(93,177,205);">email</span> = <span style="color: rgb(186, 136, 86);">"jorgewellesleybh@gmail.com"</span>;<br>
+                <span class="lgreen">String</span> <span class="lblue">firstName</span> = <span class="lbrown">"Jorge"</span>;<br>
+                <span class="lgreen">String</span> <span class="lblue">lastName</span> = <span class="lbrown">"Wellesley-Bourke Hernandez"</span>;<br>
+                <span class="lgreen">int</span> <span class="lblue">currentAge</span> = <span class="lbrown" id="year-difference"></span>;<br>
+                <span class="lgreen">String</span> <span class="lblue">state</span> = <span class="lbrown">"NJ"</span>;<br>
+                <span class="lgreen">String</span> <span class="lblue">city</span> = <span class="lbrown">"Guttenberg"</span>;<br>
+                <span class="lgreen">String</span> <span class="lblue">email</span> = <span class="lbrown">"jorgewellesleybh@gmail.com"</span>;<br>
                 <br>
             </div>
         </div>
 
         <div class="btn-group">
-            <button onclick="openInNewTab('Jorge Wellesley-Bourke Hernandez.pdf')">open resume</button>
+            <button onclick="openInNewTab('./content/Jorge Wellesley-Bourke Hernandez.pdf')">open resume</button>
             <button onclick="openInNewTab('https://github.com/Jorge-WBH')">open github</button>
         </div>
         <div class="btn-group">
@@ -47,15 +44,7 @@
         
     </div>
 
-    <div class="tcenter">
-        <small>
-            <footer>
-                This website is in very early production<br>
-                © 2024 Jorge Wellesley-B H<br>
-                Last updated on 4/20/25
-            </footer>
-        </small>
-    </div>
+    <footer-template></footer-template>
 
     <script>
         function yearDiff() {

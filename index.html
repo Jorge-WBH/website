@@ -8,17 +8,15 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="templates/header.js" type="text/javascript" defer></script>
+    <script src="templates/footer.js" type="text/javascript" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./content/favicon.ico">
 </head>
 <body>
     <!--nav bar-->
-    <ul style="margin: 0;">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li style="float: right;"><a href="https://genrandom.com/cats/" target="_blank">?</a></li>
-    </ul>
+    
+    <header-template></header-template>
 
     <!--main content-->
     <div class="centerblock">
@@ -31,19 +29,12 @@
 
         <p>
             This website serves as a way to know who I am and check out some things I made so please explore it! 
-            As time passes on, this website should be getting updated with new information and optimizations.
+            As time passes on, this website should be getting updated with new information and optimizations and maybe some fun stuff.
+            If you wish to talk to me, email me at <a class="red" href="mailto:jorgewellesleybh@gmail.com">jorgewellesleybh@gmail.com</a>
             Thank you for visiting!
         </p>
     </div>
 
-    <div class="tcenter">
-        <small>
-            <footer>
-                This website is in very early production<br>
-                © 2024 Jorge Wellesley-B H<br>
-                Last updated on 4/20/25
-            </footer>
-        </small>
-    </div>
+    <footer-template></footer-template>
 </body>
 </html>
