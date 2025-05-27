@@ -1,6 +1,6 @@
-body{
+body {
     background-color: black;
-    color:aliceblue;
+    color: aliceblue;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -9,19 +9,19 @@ body{
 }
 
 @media screen and (max-width: 425px) {
-    body{
+    body {
         background-color: black;
-        color:aliceblue;
+        color: aliceblue;
         font-family: "Montserrat", sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 1em;
         margin: 0;
-    }    
+    }
 }
 
-.red{
-    color:rgb(194, 2, 2);
+.red {
+    color: rgb(194, 2, 2);
 }
 
 .lgreen {
@@ -29,19 +29,19 @@ body{
 }
 
 .lblue {
-    color: rgb(93,177,205);
+    color: rgb(93, 177, 205);
 }
 
 .lbrown {
     color: rgb(186, 136, 86)
 }
 
-.tcenter{
+.tcenter {
     text-align: center;
     line-height: 1.5;
 }
 
-.centerblock{
+.centerblock {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -49,15 +49,15 @@ body{
     max-width: 900px;
 }
 
-.btn-group{
+.btn-group {
     display: flex;
     justify-content: space-around;
     min-height: 40px;
 }
 
-.btn-group button{
+.btn-group button {
     background-color: grey;
-    color:white;
+    color: white;
     cursor: pointer;
     flex: 1;
     font: inherit;
@@ -66,27 +66,28 @@ body{
     border: 1px solid rgb(0, 0, 0);
 }
 
-.btn-group button:hover{
+.btn-group button:hover {
     background-color: rgb(194, 2, 2);
 }
 
-a{
+a {
     color: inherit;
 }
-ul{
+
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:rgb(47, 73, 108);
+    background-color: rgb(47, 73, 108);
     font-size: 0.8em;
 }
 
-li{
+li {
     float: left;
 }
 
-li a{
+li a {
     display: block;
     color: white;
     text-align: center;
@@ -94,17 +95,18 @@ li a{
     text-decoration: none;
 }
 
-li a:hover, li a:focus{
+li a:hover,
+li a:focus {
     background-color: rgb(194, 2, 2);
 }
 
-.row:after{
+.row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     padding: 20px;
