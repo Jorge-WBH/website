@@ -98,12 +98,6 @@ li a:hover, li a:focus{
     background-color: rgb(194, 2, 2);
 }
 
-.column{
-    float: left;
-    width: 45%;
-    margin: 1%;
-}
-
 .row:after{
     content: "";
     display: table;

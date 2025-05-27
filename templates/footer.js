@@ -9,6 +9,7 @@ class Footer extends HTMLElement {
             .footer-container {
                 text-align: center;
                 width: 100%;
+                margin-bottom: 20px;
             }
             .footer-content {
                 font-size: 0.9em;
@@ -23,7 +24,6 @@ class Footer extends HTMLElement {
         </style>
         <div class="footer-container">
             <div class="footer-content">
-                This website is in very early production<br>
                 © 2024 Jorge Wellesley-B H<br>
                 Last updated on 5/27/25<br>
                 <a href="https://github.com/Jorge-WBH/website">Repo link</a>
