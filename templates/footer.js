@@ -1,9 +1,24 @@
 class Footer extends HTMLElement {
     constructor() {
         super();
+        this.lastUpdate = "fetching...";
     }
 
-    connectedCallback() {
+    async connectedCallback() {
+        try {
+            const response = await fetch('https://api.github.com/repos/Jorge-WBH/website');
+            const data = await response.json();
+            const date = new Date(data.pushed_at);
+            this.lastUpdate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+        } catch (error) {
+            console.error('Error fetching repository data:', error);
+            this.lastUpdate = "Could not retrieve last update";
+        }
+
+        this.render();
+    }
+
+    render() {
         this.innerHTML = `
         <style>
             .footer-container {
@@ -24,8 +39,9 @@ class Footer extends HTMLElement {
         </style>
         <div class="footer-container">
             <div class="footer-content">
-                © 2024 Jorge Wellesley-B H<br>
-                Last updated on 5/27/25<br>
+                Jorge Wellesley-B H<br>
+                Last updated on:<br>
+                ${this.lastUpdate}<br>
                 <a href="https://github.com/Jorge-WBH/website">Repo link</a>
             </div>
         </div>

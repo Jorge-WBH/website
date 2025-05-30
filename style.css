@@ -74,6 +74,10 @@ a {
     color: inherit;
 }
 
+p {
+    margin-top: 0;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -100,6 +104,50 @@ li a:focus {
     background-color: rgb(194, 2, 2);
 }
 
+h2 {
+    margin: 0;
+}
+
+h2 img {
+    height: 1.2em;
+    vertical-align: middle;
+}
+
+.LR {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2em;
+}
+
+.LR h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin: 0;
+}
+
+.LR h2 span {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .LR h2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .LR h2 span {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
 .row:after {
     content: "";
     display: table;
@@ -114,4 +162,20 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%; */
+}
+
+code {
+    background: #1b1b1b;
+    border-left: 3px solid grey;
+    color: #e2e2e2;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em;
+    display: block;
+    word-wrap:inherit;
 }
