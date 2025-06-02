@@ -31,7 +31,7 @@ class Footer extends HTMLElement {
                 line-height: 1.5;
             }
             .footer-content a {
-                color: rgb(194, 2, 2);
+                color: rgb(219, 4, 4);
             }
             .footer-content a:hover {
                 text-decoration: underline;

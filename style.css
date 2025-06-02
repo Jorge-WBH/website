@@ -1,4 +1,5 @@
-body {
+/* Base styles */
+body, button{
     background-color: black;
     color: aliceblue;
     font-family: "Montserrat", sans-serif;
@@ -8,35 +9,54 @@ body {
     margin: 0;
 }
 
-@media screen and (max-width: 425px) {
-    body {
-        background-color: black;
-        color: aliceblue;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1em;
-        margin: 0;
-    }
+.runButton {
+    background-color: rgb(47, 73, 108);
+    border: 0;
+    width: 3em;
+    height: 2em;
+    border-radius: 16px;
+    animation: mymove 3s infinite;
 }
 
-.red {
-    color: rgb(194, 2, 2);
+@keyframes mymove {
+    50% {box-shadow: 0 0 30px rgb(219, 4, 4);}
 }
 
-.lgreen {
-    color: rgb(78, 187, 125);
+.runButton:hover, .runButton:focus {
+    background-color: rgb(219, 4, 4);
 }
 
-.lblue {
-    color: rgb(93, 177, 205);
+/* Basic elements */
+a { color: inherit; }
+p { margin-top: 0; }
+h2 { margin: 0; }
+h2 img {
+    height: 1.2em;
+    vertical-align: middle;
 }
 
-.lbrown {
-    color: rgb(186, 136, 86)
+/* Color utilities */
+.red    { color: rgb(219, 4, 4);}
+.lred   { color: #E06C75;}
+.orange { color: #D19A66;}
+.yellow { color: #E5C07B;}
+.lgreen { color: #98C379;}
+.lblue  { color: #61AFEF;}
+.cyan   { color: #56B6C2;}
+.dblue  { color: rgb(47, 73, 108);}
+.purple { color: #C678DD;}
+
+.highlight {
+    background-color: #404859;
+    padding: 0.1em 0.2em;
 }
 
-.tcenter {
+.highlight2 {
+    background-color: #282c34;
+}
+
+/* Layout utilities */
+.tcenter  { 
     text-align: center;
     line-height: 1.5;
 }
@@ -47,6 +67,38 @@ body {
     margin: auto;
     padding: 40px;
     max-width: 900px;
+}
+
+/* Navigation */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(47, 73, 108);
+    font-size: 0.8em;
+}
+
+li { float: left; }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover,
+li a:focus {
+    background-color: rgb(219, 4, 4);
+}
+
+/* Components */
+.scrollable-projects {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 20px;
 }
 
 .btn-group {
@@ -61,63 +113,26 @@ body {
     cursor: pointer;
     flex: 1;
     font: inherit;
-    border: 1px;
-    border-radius: 1;
     border: 1px solid rgb(0, 0, 0);
+    border-radius: 1px;
 }
 
 .btn-group button:hover {
-    background-color: rgb(194, 2, 2);
-}
-
-a {
-    color: inherit;
-}
-
-p {
-    margin-top: 0;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(47, 73, 108);
-    font-size: 0.8em;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-
-li a:hover,
-li a:focus {
-    background-color: rgb(194, 2, 2);
-}
-
-h2 {
-    margin: 0;
-}
-
-h2 img {
-    height: 1.2em;
-    vertical-align: middle;
+    background-color: rgb(219, 4, 4);
 }
 
 .LR {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     margin-bottom: 2em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0.5em;
+    margin-bottom: 3em;
 }
 
 .LR h2 {
@@ -154,28 +169,94 @@ h2 img {
     clear: both;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    /* position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%; */
-}
-
 code {
-    background: #1b1b1b;
-    border-left: 3px solid grey;
+    background: #282c34;
+    /* Remove border-left here */
     color: #e2e2e2;
-    page-break-inside: avoid;
+    /* page-break-inside: avoid; */
     font-family: monospace;
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
     padding: 1em;
     display: block;
-    word-wrap:inherit;
+    position: relative; /* for pseudo-element positioning */
+    white-space: pre-wrap;      /* enable word wrapping */
+    word-break: break-word;     /* break long words if needed */
+}
+
+code2 {
+    background: #282c34;
+    border-left: 3px solid #5d6065;
+    color: #e2e2e2;
+    /* page-break-inside: avoid; */
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    padding: 1em;
+    display: block;
+    position: relative; /* for pseudo-element positioning */
+}
+
+/* Add fading border-left using a pseudo-element */
+code::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    z-index: 3;
+    border-radius: 3px 0 0 3px;
+    background: linear-gradient(
+        to bottom,
+        #5d6065 0%,
+        rgba(93,96,101,0) 100%
+    );
+    pointer-events: none;
+}
+
+/* Fade out effect at the bottom of code blocks */
+code::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20em;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        #000000 100%
+    );
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    z-index: 2;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Media queries */
+@media screen and (max-width: 425px) {
+    body {
+        font-size: 1em;
+    }
+    
+    code {
+        font-size: 13px;
+    }
+}
+
+.blur {
+    filter: blur(1px);
+    pointer-events: none;
+    user-select: none;
+    white-space: pre-wrap;      /* enable word wrapping */
+    word-break: break-word;
 }
