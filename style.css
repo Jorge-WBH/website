@@ -1,5 +1,6 @@
 /* Base styles */
-body, button{
+body,
+button {
     background-color: black;
     color: aliceblue;
     font-family: "Montserrat", sans-serif;
@@ -19,32 +20,70 @@ body, button{
 }
 
 @keyframes mymove {
-    50% {box-shadow: 0 0 30px rgb(219, 4, 4);}
+    50% {
+        box-shadow: 0 0 30px rgb(219, 4, 4);
+    }
 }
 
-.runButton:hover, .runButton:focus {
+.runButton:hover,
+.runButton:focus {
     background-color: rgb(219, 4, 4);
 }
 
 /* Basic elements */
-a { color: inherit; }
-p { margin-top: 0; }
-h2 { margin: 0; }
+a {
+    color: inherit;
+}
+
+p {
+    margin-top: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
 h2 img {
     height: 1.2em;
     vertical-align: middle;
 }
 
 /* Color utilities */
-.red    { color: rgb(219, 4, 4);}
-.lred   { color: #E06C75;}
-.orange { color: #D19A66;}
-.yellow { color: #E5C07B;}
-.lgreen { color: #98C379;}
-.lblue  { color: #61AFEF;}
-.cyan   { color: #56B6C2;}
-.dblue  { color: rgb(47, 73, 108);}
-.purple { color: #C678DD;}
+.red {
+    color: rgb(219, 4, 4);
+}
+
+.lred {
+    color: #E06C75;
+}
+
+.orange {
+    color: #D19A66;
+}
+
+.yellow {
+    color: #E5C07B;
+}
+
+.lgreen {
+    color: #98C379;
+}
+
+.lblue {
+    color: #61AFEF;
+}
+
+.cyan {
+    color: #56B6C2;
+}
+
+.dblue {
+    color: rgb(47, 73, 108);
+}
+
+.purple {
+    color: #C678DD;
+}
 
 .highlight {
     background-color: #404859;
@@ -56,7 +95,7 @@ h2 img {
 }
 
 /* Layout utilities */
-.tcenter  { 
+.tcenter {
     text-align: center;
     line-height: 1.5;
 }
@@ -79,7 +118,9 @@ ul {
     font-size: 0.8em;
 }
 
-li { float: left; }
+li {
+    float: left;
+}
 
 li a {
     display: block;
@@ -180,9 +221,12 @@ code {
     margin-bottom: 1.6em;
     padding: 1em;
     display: block;
-    position: relative; /* for pseudo-element positioning */
-    white-space: pre-wrap;      /* enable word wrapping */
-    word-break: break-word;     /* break long words if needed */
+    position: relative;
+    /* for pseudo-element positioning */
+    white-space: pre-wrap;
+    /* enable word wrapping */
+    word-break: break-word;
+    /* break long words if needed */
 }
 
 code2 {
@@ -196,7 +240,8 @@ code2 {
     margin-bottom: 1.6em;
     padding: 1em;
     display: block;
-    position: relative; /* for pseudo-element positioning */
+    position: relative;
+    /* for pseudo-element positioning */
 }
 
 /* Add fading border-left using a pseudo-element */
@@ -209,11 +254,9 @@ code::before {
     height: 100%;
     z-index: 3;
     border-radius: 3px 0 0 3px;
-    background: linear-gradient(
-        to bottom,
-        #5d6065 0%,
-        rgba(93,96,101,0) 100%
-    );
+    background: linear-gradient(to bottom,
+            #5d6065 0%,
+            rgba(93, 96, 101, 0) 100%);
     pointer-events: none;
 }
 
@@ -226,11 +269,9 @@ code::after {
     bottom: 0;
     height: 20em;
     pointer-events: none;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        #000000 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            #000000 100%);
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     z-index: 2;
@@ -247,7 +288,7 @@ footer {
     body {
         font-size: 1em;
     }
-    
+
     code {
         font-size: 13px;
     }
@@ -257,6 +298,33 @@ footer {
     filter: blur(1px);
     pointer-events: none;
     user-select: none;
-    white-space: pre-wrap;      /* enable word wrapping */
+    white-space: pre-wrap;
+    /* enable word wrapping */
     word-break: break-word;
+}
+
+/* Remove these classes as they're no longer needed
+.code-cropped {
+    height: 5em;
+    overflow: hidden;
+}
+
+.code-cropped .blur {
+    display: none;
+}
+
+.code-cropped::after {
+    display: none;
+} */
+
+.hide-code {
+    display: none;
+}
+
+.code-executed::after {
+    display: none;
+}
+
+.code-executed .blur {
+    display: none;
 }
