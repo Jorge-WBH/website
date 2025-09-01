@@ -39,10 +39,9 @@ class Footer extends HTMLElement {
         </style>
         <div class="footer-container">
             <div class="footer-content">
-                Jorge Wellesley-B H<br>
+                Jorge Wellesley-Bourke Hernandez<br>
                 Last updated on:<br>
                 ${this.lastUpdate}<br>
-                <a href="https://github.com/Jorge-WBH/website">Repo link</a>
             </div>
         </div>
         `;

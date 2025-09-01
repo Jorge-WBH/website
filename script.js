@@ -23,16 +23,21 @@ document.addEventListener('DOMContentLoaded', function () {
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = runCodeContent.innerHTML;
 
-            // Recursive typewriter for text nodes only
+            // Recursive typewriter for text nodes only, with punctuation pause
             function typeNode(node, parent, done) {
                 if (node.nodeType === Node.TEXT_NODE) {
                     let text = node.textContent;
                     let i = 0;
+                    let textNode = document.createTextNode('');
+                    parent.appendChild(textNode);
                     function typeChar() {
                         if (i < text.length) {
-                            parent.appendChild(document.createTextNode(text[i]));
+                            textNode.textContent += text[i];
+                            let char = text[i];
                             i++;
-                            setTimeout(typeChar, 8);
+                            // Pause longer after punctuation
+                            let delay = /[.,!?;:]/.test(char) ? 250 : 8;
+                            setTimeout(typeChar, delay);
                         } else {
                             done();
                         }

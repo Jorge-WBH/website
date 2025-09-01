@@ -22,7 +22,11 @@
 
     <!--main content-->
     <div class="centerblock">
-        <h1>About</h1>
+        <h1>About.html</h1>
+        <p>
+            Some extra info about me and what I know, as well as some buttons to see other things
+        </p>
+        <hr style="width:100%; margin-bottom: 2em;">
         <code2>
         <div style="word-wrap: break-word;">
             <div>
@@ -33,9 +37,19 @@
                 <span class="yellow">String</span> <span class="lred">city</span> <span class="cyan">=</span> <span class="lgreen">"Guttenberg"</span>;<br>
                 <span class="yellow">int</span> <span class="lred">zipCode</span> <span class="cyan">=</span> <span class="orange">07093</span>;<br>
                 <span class="yellow">String</span> <span class="lred">email</span> <span class="cyan">=</span> <span class="lgreen">"jorgewellesleybh@gmail.com"</span>;<br>
-                <span class="yellow">String</span> <span class="lred">school</span> <span class="cyan">=</span> <span class="lgreen">"StevensInstituteOfTechnology"</span>;<br>
+                <span class="yellow">String</span> <span class="lred">school</span> <span class="cyan">=</span> <span class="lgreen">"Stevens Institute of Technology"</span>;<br>
                 <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">programmingLangs</span> <span class="cyan">=</span> <span class="orange">{</span>
-                <span class="lgreen">"python"</span>, <span class="lgreen">"java"</span>, <span class="lgreen">"html"</span>, <span class="lgreen">"css"</span>, <span class="lgreen">"kotlin"</span>, <span class="lgreen">"scheme"</span>, <span class="lgreen">"javascript"</span>, <span class="lgreen">"sqlite"</span>
+                <script>
+                function formatLangs(str) {
+                    return str.split(", ").map(lang => `<span class="lgreen">"${lang}"</span>`).join(", ");
+                }
+                // Example usage:
+                document.write(formatLangs("python, java, html, css, kotlin, scheme, javascript, sqlite"));
+                </script><br>
+                <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">software</span> <span class="cyan">=</span> <span class="orange">{</span>
+                <script>
+                document.write(formatLangs("visualStudioCode, intellij, androidStudio, IDLE, blender, onshape, sketchup, fusion360, ultimakerCura, photoshop, premierePro, illustrator, inkscape, davinciResolve, microsoftOfficeSuite, googleDriveSuite"))
+                </script>
                 <span class="orange">}</span>;
             </div>
         </div>
@@ -44,11 +58,8 @@
         <div class="btn-group">
             <button onclick="openInNewTab('./content/Jorge Wellesley-Bourke Hernandez.pdf')">open resume</button>
             <button onclick="openInNewTab('https://github.com/Jorge-WBH')">open github</button>
-        </div>
-        <div class="btn-group">
-            <button
-                onclick="openInNewTab('https://www.linkedin.com/in/jorge-wellesley-bourke-hernandez-71b168344/')">open
-                linkedin</button>
+            <button onclick="openInNewTab('https://www.linkedin.com/in/jorgewbh')">open linkedin</button>
+            <button onclick="openInNewTab('https://stevens.joinhandshake.com/profiles/jwbh')">open handshake</button>
             <button onclick="copyEmail()" id="copyEmailButton">copy email</button>
         </div>
 
