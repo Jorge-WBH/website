@@ -1,20 +1,9 @@
 class Footer extends HTMLElement {
     constructor() {
         super();
-        this.lastUpdate = "fetching...";
     }
 
     async connectedCallback() {
-        try {
-            const response = await fetch('https://api.github.com/repos/Jorge-WBH/website');
-            const data = await response.json();
-            const date = new Date(data.pushed_at);
-            this.lastUpdate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
-        } catch (error) {
-            console.error('Error fetching repository data:', error);
-            this.lastUpdate = "Could not retrieve last update";
-        }
-
         this.render();
     }
 
@@ -41,7 +30,7 @@ class Footer extends HTMLElement {
             <div class="footer-content">
                 Jorge Wellesley-Bourke Hernandez<br>
                 Last updated on:<br>
-                ${this.lastUpdate}<br>
+                September 7, 2025<br>
             </div>
         </div>
         `;
