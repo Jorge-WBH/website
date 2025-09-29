@@ -30,7 +30,7 @@ class Footer extends HTMLElement {
             <div class="footer-content">
                 Jorge Wellesley-Bourke Hernandez<br>
                 Last updated on:<br>
-                September 7, 2025<br>
+                September 29, 2025<br>
             </div>
         </div>
         `;
