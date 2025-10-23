@@ -37,15 +37,22 @@
                 <span class="yellow">String</span> <span class="lred">city</span> <span class="cyan">=</span> <span class="lgreen">"Guttenberg"</span>;<br>
                 <span class="yellow">int</span> <span class="lred">zipCode</span> <span class="cyan">=</span> <span class="orange">07093</span>;<br>
                 <span class="yellow">String</span> <span class="lred">email</span> <span class="cyan">=</span> <span class="lgreen">"jorgewellesleybh@gmail.com"</span>;<br>
+                <span class="yellow">int</span> <span class="lred">phoneNumber</span> <span class="cyan">=</span> <span class="orange">9142232597</span>;<br>
                 <span class="yellow">String</span> <span class="lred">school</span> <span class="cyan">=</span> <span class="lgreen">"Stevens Institute of Technology"</span>;<br>
-                <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">programmingLangs</span> <span class="cyan">=</span> <span class="orange">{</span>
+                <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">programmingLanguages</span> <span class="cyan">=</span> <span class="orange">{</span>
                 <script>
                 function formatLangs(str) {
                     return str.split(", ").map(lang => `<span class="lgreen">"${lang}"</span>`).join(", ");
                 }
                 // Example usage:
-                document.write(formatLangs("python, java, html, css, c++, kotlin, scheme, javascript, sqlite"));
-                </script><br>
+                document.write(formatLangs("python, java, html, css, c, c++, arm64 assembly, r, react, kotlin, scheme, javascript, sqlite"));
+                </script>
+                <span class="orange">}</span>;<br>
+                <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">speakingLanguages</span> <span class="cyan">=</span> <span class="orange">{</span>
+                <script>
+                document.write(formatLangs("english, spanish"))
+                </script>
+                <span class="orange">}</span>;<br>
                 <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">software</span> <span class="cyan">=</span> <span class="orange">{</span>
                 <script>
                 document.write(formatLangs("visualStudioCode, intellij, androidStudio, IDLE, blender, onshape, sketchup, fusion360, ultimakerCura, photoshop, premierePro, illustrator, inkscape, davinciResolve, microsoftOfficeSuite, googleDriveSuite"))

@@ -11,7 +11,7 @@ button {
 }
 
 .runButton {
-    background-color: rgb(47, 73, 108);
+    background-color: #272727;
     border: 0;
     width: 3em;
     height: 2em;
@@ -21,13 +21,13 @@ button {
 
 @keyframes mymove {
     50% {
-        box-shadow: 0 0 30px rgb(219, 4, 4);
+        box-shadow: 0 0 30px #ffffff;
     }
 }
 
 .runButton:hover,
 .runButton:focus {
-    background-color: rgb(219, 4, 4);
+    background-color: #7c39ac;
 }
 
 /* Basic elements */
@@ -49,6 +49,12 @@ h2 img {
 }
 
 /* Color utilities */
+
+/*
+dark purple = #7c39ac
+dark grey   = #272727
+
+*/
 .red {
     color: rgb(219, 4, 4);
 }
@@ -85,8 +91,11 @@ h2 img {
     color: #C678DD;
 }
 
+.dpurple {
+    color: #7c39ac;
+}
+
 .highlight {
-    background-color: #404859;
     padding: 0.1em 0.2em;
 }
 
@@ -114,7 +123,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(47, 73, 108);
+    background-color: #272727;
     font-size: 0.8em;
 }
 
@@ -132,7 +141,7 @@ li a {
 
 li a:hover,
 li a:focus {
-    background-color: rgb(219, 4, 4);
+    background-color: #7c39ac;
 }
 
 /* Components */
@@ -159,7 +168,7 @@ li a:focus {
 }
 
 .btn-group button:hover {
-    background-color: rgb(219, 4, 4);
+    background-color: #7c39ac;
 }
 
 @media screen and (max-width: 500px) {
@@ -221,7 +230,7 @@ li a:focus {
 }
 
 code {
-    background: #282c34;
+    background: #272727;
     /* Remove border-left here */
     color: #e2e2e2;
     /* page-break-inside: avoid; */
@@ -240,7 +249,7 @@ code {
 }
 
 code2 {
-    background: #282c34;
+    background: #272727;
     border-left: 3px solid #5d6065;
     color: #e2e2e2;
     /* page-break-inside: avoid; */
@@ -263,10 +272,9 @@ code::before {
     width: 3px;
     height: 100%;
     z-index: 3;
-    border-radius: 3px 0 0 3px;
     background: linear-gradient(to bottom,
             #5d6065 0%,
-            rgba(93, 96, 101, 0) 100%);
+            rgba(0, 0, 0, 0) 100%);
     pointer-events: none;
 }
 
@@ -312,20 +320,6 @@ footer {
     /* enable word wrapping */
     word-break: break-word;
 }
-
-/* Remove these classes as they're no longer needed
-.code-cropped {
-    height: 5em;
-    overflow: hidden;
-}
-
-.code-cropped .blur {
-    display: none;
-}
-
-.code-cropped::after {
-    display: none;
-} */
 
 .hide-code {
     display: none;
