@@ -1,77 +1,83 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const runButton = document.querySelector('.runButton');
-    const runCodeDiv = document.getElementById('runCode');
-    const runCodeContent = document.getElementById('runCodeContent');
-    const runCodeTypewriter = document.getElementById('runCodeTypewriter');
-    const blurSpans = document.querySelectorAll('.blur');
-    const codeBlock = document.querySelector('code');
+    const runButton = document.getElementById('runButton');
+    const input = document.getElementById('runCode');
+    const output = document.getElementById("revealText");
 
-    if (runButton && runCodeDiv && runCodeContent && runCodeTypewriter) {
-        runButton.addEventListener('click', function () {
-            // Hide button
-            runButton.style.display = 'none';
+    const content = input.innerHTML.trim();
+    const speed = 15;
 
-            // Remove blur and fade effects
-            codeBlock.classList.add('code-executed');
+    runButton.addEventListener("click", reveal);
 
-            // Show output
-            runCodeDiv.style.display = '';
-            runCodeTypewriter.innerHTML = '';
-            runCodeContent.style.display = 'none';
-
-            // Parse HTML into nodes
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = runCodeContent.innerHTML;
-
-            // Recursive typewriter for text nodes only, with punctuation pause
-            function typeNode(node, parent, done) {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    let text = node.textContent;
-                    let i = 0;
-                    let textNode = document.createTextNode('');
-                    parent.appendChild(textNode);
-                    function typeChar() {
-                        if (i < text.length) {
-                            textNode.textContent += text[i];
-                            let char = text[i];
-                            i++;
-                            // Pause longer after punctuation
-                            let delay = /[.,!?;:]/.test(char) ? 250 : 8;
-                            setTimeout(typeChar, delay);
-                        } else {
-                            done();
-                        }
-                    }
-                    typeChar();
-                } else if (node.nodeType === Node.ELEMENT_NODE) {
-                    const el = node.cloneNode(false);
-                    parent.appendChild(el);
-                    const children = Array.from(node.childNodes);
-                    let idx = 0;
-                    function nextChild() {
-                        if (idx < children.length) {
-                            typeNode(children[idx], el, nextChild);
-                            idx++;
-                        } else {
-                            done();
-                        }
-                    }
-                    nextChild();
-                } else {
-                    done();
-                }
+    function reveal() {
+        // hide the button and code
+        const b = runButton.getBoundingClientRect();
+        confetti({
+            startVelocity:20,
+            particleCount:50,
+            spread:80,
+            origin: {
+                x: (b.left + b.width/2)/window.innerWidth,
+                y: (b.top + b.height/2)/window.innerHeight
             }
-
-            // Start typewriter effect for all children
-            const nodes = Array.from(tempDiv.childNodes);
-            let idx = 0;
-            function nextNode() {
-                if (idx < nodes.length) {
-                    typeNode(nodes[idx], runCodeTypewriter, nextNode);
-                    idx++;
-                }
-            }
-            nextNode();
         });
+        runButton.style.display = 'none';
+        document.querySelector('code').style.display = 'none';
+
+        // Reset output
+        output.innerHTML = '';
+
+        // Parse HTML content
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = content;
+
+        // Recursive typewriter for text nodes
+        function typeNode(node, parent, done) {
+            // if the thing is text
+            if (node.nodeType === Node.TEXT_NODE) {
+                let text = node.textContent;
+                let i = 0;
+                let textNode = document.createTextNode('');
+                parent.appendChild(textNode);
+
+                function typeChar() {
+                    if (i < text.length) {
+                        textNode.textContent += text[i];
+                        i++;
+                        setTimeout(typeChar, speed);
+                    } else {
+                        done();
+                    }
+                }
+                typeChar();
+            } // if the thing is an element (i.e. link)
+            else if (node.nodeType === Node.ELEMENT_NODE) {
+                const el = node.cloneNode(false);
+                parent.appendChild(el);
+                const children = Array.from(node.childNodes);
+                let idx = 0;
+                function nextChild() {
+                    if (idx < children.length) {
+                        typeNode(children[idx], el, nextChild);
+                        idx++;
+                    } else {
+                        done();
+                    }
+                }
+                nextChild();
+            } else {
+                done();
+            }
+        }
+
+        // Start typewriter effect
+        const nodes = Array.from(tempDiv.childNodes);
+        let idx = 0;
+        function nextNode() {
+            if (idx < nodes.length) {
+                typeNode(nodes[idx], output, nextNode);
+                idx++;
+            }
+        }
+        nextNode();
     }
 });

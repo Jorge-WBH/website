@@ -12,6 +12,7 @@
     <script src="templates/header.js" type="text/javascript" defer></script>
     <script src="templates/footer.js" type="text/javascript" defer></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/canvas-confetti@1.5.1/dist/confetti.browser.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="./content/favicon.ico">
@@ -24,22 +25,22 @@
 
     <!--main content-->
     <div class="centerblock">
+        <!-- top part which has the title and the run button -->
         <div class="LR" style="margin-bottom: 1em;">
             <h1 style="margin: 0;">Intro.java</h1>
-            <button class="runButton">
-                Run
-            </button>
+            <button class="runButton" id="runButton">Run</button>
         </div>
 
+        <!-- the fancy text code thing -->
         <div><code><pre style="margin: 0; font-size: 0.66em;">
-<span class="blur"><span class="purple">import</span> <span class="yellow">java.io.File</span>;
+<span class="blur" id="blur1"><span class="purple">import</span> <span class="yellow">java.io.File</span>;
 <span class="purple">import</span> <span class="yellow">java.io.FileNotFoundException</span>;
 <span class="purple">import</span> <span class="yellow">java.util.Scanner</span>;
 
 <span class="purple">public class</span> <span class="yellow">Intro</span> {
     <span class="purple">static void</span> <span class="lblue">main</span>(<span class="yellow">String</span>[] <span class="lred">args</span>) {</span>
-    <span style="font-size: 3em; margin: 0; word-wrap: break-word; white-space: normal; display: inline-block;"><span class="highlight"><span class="yellow">System</span>.<span class="lred">out</span>.<span class="lblue">println</span>(<span class="lgreen">"Welcome to jorge.party!"</span>);</span></span>
-<span class="blur">  <span class="purple">try</span> {
+    <span style="font-size: 3em; white-space: normal; display: inline-block;"><span><span class="yellow">System</span>.<span class="lred">out</span>.<span class="lblue">println</span>(<span class="lgreen">"Welcome to jorge.party!"</span>);</span></span>
+<span class="blur" id="blur2">  <span class="purple">try</span> {
       <span class="yellow">File</span> <span class="lred">file</span> <span class="cyan">=</span> <span class="purple">new</span> <span class="yellow">File</span>(<span class="lgreen">"introduction.txt"</span>);
       <span class="yellow">Scanner</span> <span class="lred">scanner</span> <span class="cyan">=</span> <span class="purple">new</span> <span class="yellow">Scanner</span>(<span class="lred">file</span>);
       <span class="purple">while</span> (<span class="lred">scanner</span>.<span class="lblue">hasNextLine</span>()) {
@@ -50,32 +51,25 @@
       <span class="yellow">System</span>.<span class="lred">out</span>.<span class="lblue">println</span>(<span class="lgreen">"File not found: "</span> <span class="cyan">+</span> <span class="lred">e</span>.<span class="lblue">getMessage</span>());
     }
   }
-}</span></pre></code></div>
+}
+        </span></pre></code></div>
+        <!-- hidden text to reveal -->
         <div id="runCode" style="display:none;">
-            <div id="runCodeContent" style="display:none;">
-                <p>
-                    Welcome to jorge.party!
-                </p>
-                <p>
-                    My name is Jorge and welcome to my website! I am currently a
-                    <a class="dpurple" href="https://m.media-amazon.com/images/I/71oKB-1ZCqL.jpg" target="_blank">computer
-                        science</a> student working towards my bachelor's degree at
-                    <a class="dpurple" href="https://www.stevens.edu/" target="_blank"> Stevens Institute of Technology</a>.
-                </p>
-                <p>
-                    This website serves as a way to know who I am and check out some things I made so please explore it!
-                    As time passes on, this website should be getting updated with new information and optimizations and
-                    maybe
-                    some fun stuff.
-                    If you wish to reach out to me, email me at <a class="dpurple"
-                        href="mailto:jorgewellesleybh@gmail.com">jorgewellesleybh@gmail.com</a>.
-                </p>
-                <p>
-                    Thank you for visiting, enjoy the party 🎉!
-                </p>
-            </div>
-            <div id="runCodeTypewriter"></div>
+            <p>
+                Welcome to jorge.party!
+            </p>
+            <p>
+                My name is Jorge and welcome to my website! I am currently a <a class="dpurple" href="https://m.media-amazon.com/images/I/71oKB-1ZCqL.jpg" target="_blank">computer science</a> student working towards my bachelor's degree at <a class="dpurple" href="https://www.stevens.edu/" target="_blank"> Stevens Institute of Technology</a>.
+            </p>
+            <p>
+                This website serves as a way to know who I am and check out some things I made so please explore it! As time passes on, this website should be getting updated with new information and optimizations and maybe some fun stuff. If you wish to reach out to me, email me at <a class="dpurple" href="mailto:jorgewellesleybh@gmail.com">jorgewellesleybh@gmail.com</a>.
+            </p>
+            <p>
+                Thank you for visiting, enjoy the party 🎉!
+            </p>
         </div>
+        <!-- where the text will be revealed -->
+        <div id="revealText"></div>
     </div>
 
     <footer-template></footer-template>
