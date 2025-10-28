@@ -63,7 +63,7 @@ h2 img {
     border: 0;
     width: 3em;
     height: 2em;
-    border-radius: 16px;
+    border-radius: 0.6em;
     animation: mymove 3s infinite;
 }
 
