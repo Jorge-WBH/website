@@ -27,38 +27,52 @@
             Some extra info about me and what I know, as well as some buttons to see other things
         </p>
         <code2>
-        <div style="word-wrap: break-word;">
-            <div>
-                <span class="yellow">String</span> <span class="lred">firstName</span> <span class="cyan">=</span> <span class="lgreen">"Jorge"</span>; <span class="lgrey">// Pronouce as 'George' in English please</span><br>
-                <span class="yellow">String</span> <span class="lred">lastName</span> <span class="cyan">=</span> <span class="lgreen">"Wellesley-Bourke Hernandez"</span>;<br>
-                <span class="yellow">int</span> <span class="lred">currentAge</span> <span class="cyan">=</span> <span class="orange" id="year-difference"></span>;<br>
-                <span class="yellow">String</span> <span class="lred">state</span> <span class="cyan">=</span> <span class="lgreen">"NJ"</span>;<br>
-                <span class="yellow">String</span> <span class="lred">city</span> <span class="cyan">=</span> <span class="lgreen">"Guttenberg"</span>;<br>
-                <span class="yellow">int</span> <span class="lred">zipCode</span> <span class="cyan">=</span> <span class="orange">07093</span>;<br>
-                <span class="yellow">String</span> <span class="lred">email</span> <span class="cyan">=</span> <span class="lgreen">"jorgewellesleybh@gmail.com"</span>;<br>
-                <span class="yellow">int</span> <span class="lred">phoneNumber</span> <span class="cyan">=</span> <span class="orange">9142232597</span>;<br>
-                <span class="yellow">String</span> <span class="lred">school</span> <span class="cyan">=</span> <span class="lgreen">"Stevens Institute of Technology"</span>;<br>
-                <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">programmingLanguages</span> <span class="cyan">=</span> <span class="orange">{</span>
-                <script>
-                function formatLangs(str) {
-                    return str.split(", ").map(lang => `<span class="lgreen">"${lang}"</span>`).join(", ");
-                }
-                // Example usage:
-                document.write(formatLangs("python, java, html, css, c, c++, arm64 assembly, r, react, kotlin, scheme, javascript, sqlite"));
-                </script>
-                <span class="orange">}</span>;<br>
-                <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">speakingLanguages</span> <span class="cyan">=</span> <span class="orange">{</span>
-                <script>
-                document.write(formatLangs("english, spanish"))
-                </script>
-                <span class="orange">}</span>;<br>
-                <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">software</span> <span class="cyan">=</span> <span class="orange">{</span>
-                <script>
-                document.write(formatLangs("visualStudioCode, intellij, androidStudio, IDLE, blender, onshape, sketchup, fusion360, ultimakerCura, photoshop, premierePro, illustrator, inkscape, davinciResolve, microsoftOfficeSuite, googleDriveSuite"))
-                </script>
-                <span class="orange">}</span>;
+            <div style="word-wrap: break-word;">
+                <div>
+                    <span class="yellow">String</span> <span class="lred">firstName</span> <span class="cyan">=</span>
+                    <span class="lgreen">"Jorge"</span>; <span class="lgrey">// Pronouce as 'George' in English
+                        please</span><br>
+                    <span class="yellow">String</span> <span class="lred">lastName</span> <span class="cyan">=</span>
+                    <span class="lgreen">"Wellesley-Bourke Hernandez"</span>;<br>
+                    <span class="yellow">int</span> <span class="lred">currentAge</span> <span class="cyan">=</span>
+                    <span class="orange" id="year-difference"></span>;<br>
+                    <span class="yellow">String</span> <span class="lred">state</span> <span class="cyan">=</span> <span
+                        class="lgreen">"NJ"</span>;<br>
+                    <span class="yellow">String</span> <span class="lred">city</span> <span class="cyan">=</span> <span
+                        class="lgreen">"Guttenberg"</span>;<br>
+                    <span class="yellow">int</span> <span class="lred">zipCode</span> <span class="cyan">=</span> <span
+                        class="orange">07093</span>;<br>
+                    <span class="yellow">String</span> <span class="lred">email</span> <span class="cyan">=</span> <span
+                        class="lgreen">"jorgewellesleybh@gmail.com"</span>;<br>
+                    <span class="yellow">int</span> <span class="lred">phoneNumber</span> <span class="cyan">=</span>
+                    <span class="orange">9142232597</span>;<br>
+                    <span class="yellow">String</span> <span class="lred">school</span> <span class="cyan">=</span>
+                    <span class="lgreen">"Stevens Institute of Technology"</span>;<br>
+                    <span class="yellow">String</span><span class="orange">[]</span> <span
+                        class="lred">programmingLanguages</span> <span class="cyan">=</span> <span
+                        class="orange">{</span>
+                    <script>
+                        function formatLangs(str) {
+                            return str.split(", ").map(lang => `<span class="lgreen">"${lang}"</span>`).join(", ");
+                        }
+                        // Example usage:
+                        document.write(formatLangs("python, java, html, css, c, c++, arm64 assembly, r, react, kotlin, scheme, javascript, sqlite"));
+                    </script>
+                    <span class="orange">}</span>;<br>
+                    <span class="yellow">String</span><span class="orange">[]</span> <span
+                        class="lred">speakingLanguages</span> <span class="cyan">=</span> <span class="orange">{</span>
+                    <script>
+                        document.write(formatLangs("english, spanish"))
+                    </script>
+                    <span class="orange">}</span>;<br>
+                    <span class="yellow">String</span><span class="orange">[]</span> <span class="lred">software</span>
+                    <span class="cyan">=</span> <span class="orange">{</span>
+                    <script>
+                        document.write(formatLangs("visualStudioCode, intellij, androidStudio, IDLE, blender, onshape, sketchup, fusion360, ultimakerCura, photoshop, premierePro, illustrator, inkscape, davinciResolve, microsoftOfficeSuite, googleDriveSuite"))
+                    </script>
+                    <span class="orange">}</span>;
+                </div>
             </div>
-        </div>
         </code2>
 
         <div class="btn-group">
@@ -85,18 +99,8 @@
             }
             return years;
         }
-
-        function openInNewTab(url) {
-            window.open(url, '_blank');
-        }
-
-        function copyEmail() {
-            navigator.clipboard.writeText("jorgewellesleybh@gmail.com");
-        }
-
-        function copyPhone() {
-            navigator.clipboard.writeText("9142232597");
-        }
+        function openInNewTab(url) { window.open(url, '_blank'); }
+        function copyEmail() { navigator.clipboard.writeText("jorgewellesleybh@gmail.com"); }
 
         document.getElementById("copyEmailButton").addEventListener("click", function () {
             var button = this;
